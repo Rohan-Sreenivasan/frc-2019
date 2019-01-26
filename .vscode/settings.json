@@ -12,5 +12,6 @@
     ".gradle/": true,
     "gradle*": true
   },
-  "wpilib.online": true
+  "wpilib.online": true,
+  "python.pythonPath": "C:\\Program Files\\Python36\\python.exe"
 }
