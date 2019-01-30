@@ -159,6 +159,7 @@ cv2.imshow("hsl", coolprocessor.hsl_threshold_output)
 #cv2.imshow("find lines", coolprocessor.find_lines_output)
 for line in coolprocessor.find_lines_output:
     line.drawline(img)
+    print ("{}".format(coolprocessor.find_lines_output[0].angle()))
 # coolprocessor.find_lines_output[0].drawline(img)
 cv2.imshow('1.jpg',img)
 print ("{}".format(coolprocessor.find_lines_output[0].angle()))
