@@ -130,9 +130,11 @@ filteredContours=[]
 
 
 for contour in goalFinder.find_contours_output:
+    x, y, w, h = cv2.boundingRect(contour)
 
     area=cv2.contourArea(contour)
-    if area>10000:
+    ratio = h/w
+    if ratio > 1.8 and ratio < 2.2:
         filteredContours.append(contour)
 
 totalX, totalY = 0, 0
@@ -147,8 +149,6 @@ for contour in filteredContours:
     box = cv2.boxPoints(rect)
     dBox = np.int0(box)
     cv2.drawContours(img,[dBox],0,(0,0,255),2)
-    x, y, w, h = cv2.boundingRect(contour)
-    print ("Here is stuff", x, y, w, h)
     totalX += cX
     totalY += cY
 
