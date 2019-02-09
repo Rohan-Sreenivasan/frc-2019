@@ -151,7 +151,8 @@ for contour in filteredContours:
     cv2.drawContours(img,[dBox],0,(0,0,255),2)
     totalX += cX
     totalY += cY
-
+    print (rect)   
+    
     print("contour points {},{}".format(cX,cY))
     cv2.circle(img, (cX, cY), 7, (0, 0, 0), -1)
 
